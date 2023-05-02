@@ -1,0 +1,47 @@
+#!/bin/bash
+
+#Zhigalova Regina
+
+#ITP270
+
+
+touch rivers.txt
+
+
+
+echo -e "Amazon River\n" > rivers.txt
+
+echo -e "Nile River\n" > rivers.txt
+
+echo -e "Yangtze River\n" > rivers.txt
+
+echo -e "Danube River\n" > rivers.txt
+
+echo -e "Pootomac River\n" > rivers.txt
+
+
+
+sed 's/Amazon/Ohio/g' rivers.txt > new_rivers.txt
+
+
+sort new_rivers.txt > new_rivers_v2.txt
+
+
+
+uniq new_rivers.txt > new_rivers_v3.txt
+
+
+
+diff rivers.txt new_rivers_v3.txt
+
+
+
+touch rivers.txt | echo "Amazon River, Nile River, Yangtze River, Potomac River, Danube River"
+
+> rivers.txt && sed 's/Amazon/Ohio/g' rivers.txt > new_rivers.txt | sort new_rivers.txt > new_rivers_v2.txt | uniq new_rivers_v2.txt > new_rivers_v3.txt && diff rivers.txt new_rivers_v3.txt
+
+
+
+
+
+
